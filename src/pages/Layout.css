@@ -1,0 +1,9 @@
+nav{
+    align-content: flex-end;
+    text-underline-offset: -50px;
+    margin-bottom: 15px;
+}
+a{
+    background-color: #dde2e3;
+    font-size: 30px;
+}
