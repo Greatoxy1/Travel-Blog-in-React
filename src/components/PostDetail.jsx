@@ -1,8 +1,9 @@
 import { FaBackward } from "react-icons/fa";
 const Posts = [
-  {
+  { 
     id: 1,
-
+    
+    
     title: "Journey to Rusia",
     city: "Moscow",
     date: "2023-10-01",
@@ -14,7 +15,7 @@ const Posts = [
   },
   {
     id: 2,
-
+  
     title: "Exploring the Wonders of Japan",
     city: "Tokyo",
     date: "2023-09-15",
@@ -39,7 +40,7 @@ const Posts = [
   },
   {
     id: 4,
-
+    
     title: "Safari in Kenya",
     city: "Nairobi",
     date: "2023-07-10",
@@ -54,6 +55,8 @@ const Posts = [
 ];
 
 import { useState } from "react";
+import UserCard from '../components/UserCard'
+import Map from './Map';
 
 export function PostDetail() {
   const [activeId, setActiveId] = useState(null);
@@ -64,22 +67,32 @@ export function PostDetail() {
 
   return (
     <>
+   
+
       <div className="Post">
+          
+       
         {Posts.map((post) => (
-          <div key={post.id} onClick={() => handleToggle(post.id)}>={post.user}
+          <div key={post.id} onClick={() => handleToggle(post.id)}>{post.user === post.image}
             {activeId === post.id ? (
               <div>
-                <h3 className="Post-content">Content {post.id}</h3>
+                <h3 className="Post-content">Image {post.id}</h3>
+                    <UserCard/>
+                    <Map/>
+                <p>{post.name}{post.image} </p>
+                <p>{post.name}</p>
                 <p>{post.title}</p>
                 <p>{post.date}</p>
                 <p>{post.DetailView}</p>
-
-                <a href="Go Back "><FaBackward /></a>
+                
+            
+             
+              <a href="Go Back "><FaBackward /></a>
               </div>
             ) : (
               <img src={post.img ? post.img : ""} alt={`Image ${post.id}`} />
             )}
-          </div>
+           </div>
         ))}
       </div>
     </>

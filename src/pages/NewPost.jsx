@@ -7,3 +7,4 @@ export function NewPost(){
     )
 }
 export default NewPost;
+

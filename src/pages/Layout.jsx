@@ -7,21 +7,22 @@ export function Layout(){
         <>
         <div className="Layout">
             <nav>
-                    <a> <DiCoda /></a>
-                    <a>
+                    <div> 
+                        <DiCoda />
+                    </div>
+                    <div>
                         <Link to="title">Travel Blog</Link>
-                    </a>
-                    <a>
+                    </div>
+                    <div>
                         <Link to="contact">Contact</Link>
-                    </a>
-                    <a>
+                    </div>
+                    <div>
                         <Link to="new-post">New Post</Link>
-                    </a>
+                    </div>
                     
             </nav>
 
             <Outlet />
-         
         </div>
            </>
     )
