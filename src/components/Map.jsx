@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import * as maptilersdk from '@maptiler/sdk';
-import '@maptiler/sdk/dist/maptiler-sdk.css';
+import "@maptiler/sdk/dist/maptiler-sdk.css";
+import './map.css';
 
-maptilersdk.config.apiKey = '';
+
 
 const cities = [
   {
@@ -31,23 +32,26 @@ const cities = [
     coordinates: [36.8219, -1.2921],
   }
 ];
-
-export function Map() {
+export default function Map() {
   const mapContainer = useRef(null);
-  const mapRef = useRef(null); 
+  const map = useRef();
+  const zoom = 14;
+  maptilersdk.config.apiKey = 'qymMswSxXygq2lWOZ8Cd';
 
   useEffect(() => {
-    if (mapRef.current) return;
-
-    mapRef.current = new maptilersdk.Map({
+    if (map.current) return; 
+    map.current = new maptilersdk.Map({
       container: mapContainer.current,
       style: maptilersdk.MapStyle.STREETS,
-      center: [20, 0],
-      zoom: 2,
+      center: [10,50],
+      zoom: zoom
+     
     });
 
-    cities.forEach(city => {
-      const marker = new maptilersdk.Marker()
+  },[]);
+
+  cities.forEach(city => {
+      new maptilersdk.Marker()
         .setLngLat(city.coordinates)
         .setPopup(
           new maptilersdk.Popup().setHTML(`
@@ -55,17 +59,18 @@ export function Map() {
             <p>${city.city}${city.name ? `<br><strong>By:</strong> ${city.name}` : ''}</p>
           `)
         )
-        .addTo(mapRef.current);
-    });
+       
+       
+          });
+          
 
-    return () => mapRef.current?.remove();
-  }, []);
 
   return (
+    <>
+    
     <div className="map-wrap">
       <div ref={mapContainer} className="map" />
     </div>
+    </>
   );
 }
-
-export default Map;
