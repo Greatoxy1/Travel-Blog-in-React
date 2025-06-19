@@ -37,42 +37,41 @@ export default function Map() {
   maptilersdk.config.apiKey = "qymMswSxXygq2lWOZ8Cd";
 
 
-  useEffect(() => {
-    if (map.current) return;
-   
-    map.current = new maptilersdk.Map({
-      container: mapContainer.current,
-      style: maptilersdk.MapStyle.STREETS,
-      center: [10, 50],
-      zoom: zoom,
-    });
-  }, []);
+useEffect(() => {
+  if (!mapContainer.current || map.current) return;
 
-  map.current.on(
-    "load",
-    () => {
-      const popup = new maptilersdk.Popup("").setHTML(" ");
-      new maptilersdk.Marker({ color: "#FF0000" })
-        .setLngLat([139.7525, 35.6846])
-        .setPopup(popup)
-        .addTo(map.current);
+  map.current = new maptilersdk.Map({
+    container: mapContainer.current,
+    style: maptilersdk.MapStyle.STREETS,
+    center: [10, 50],
+    zoom: zoom,
+  });
+
+  map.current.on("load", () => {
+    const popup = new maptilersdk.Popup().setHTML();
+    new maptilersdk.Marker({ color: "#FF0000" })
+      .setLngLat([139.7525, 35.6846])
+      .setPopup(popup)
+      .addTo(map.current);
 
       cities.forEach((city) => {
-        new maptilersdk.Marker()
-          .setLngLat(city.coordinates)
-          .setPopup(
-            new maptilersdk.Popup("").setHTML(`
+      new maptilersdk.Marker()
+        .setLngLat(city.coordinates)
+        .setPopup(
+          new maptilersdk.Popup().setHTML(`
+            <div style="max-width:200px;>
             <h3>${city.title}</h3>
             <p>${city.city}${
               city.name ? `<br><strong>By:</strong> ${city.name}` : ""
             }</p>
+            <a href="/posts/${city.id}" style="color: #0077cc; text-decoration: underline;">Read more</a>
+        </div>
           `)
-          )
-          .addTo(map.current);
-      });
-    },
-    []
-  );
+        )
+        .addTo(map.current);
+    });
+  });
+});
 
   return (
     <>
