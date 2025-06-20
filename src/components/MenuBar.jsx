@@ -9,11 +9,11 @@ export function MenuBar() {
 
   return (
     <>
-    <Router/>
+      <Router/> 
       <div className="MenuBar">
         <nav>
           <button onClick={handleToggle}>
-            {isLoggedIn ? "Logout" : "Login"}
+         {isLoggedIn ? "Logout" : "Login"}
           </button>
         </nav>
       </div>

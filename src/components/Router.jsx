@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "../pages/Layout";
 import Contact from "../pages/Contact";
 import NewPost from "../pages/NewPost";
-import Home from "./DashBoard";
+import Map from "./Map";
 export function Router(){
     return(
         <>
@@ -13,8 +13,8 @@ export function Router(){
             <Route path="/" element={<Layout />}>
               <Route path="contact" element={<Contact />} />
               <Route path="new post" element= {<NewPost/>}/>
-              <Route path="/Home" element={<Home/>} />
-             
+              <Route path="/Home" element={<Map/>} />
+            
             </Route>
           </Routes>
           </>

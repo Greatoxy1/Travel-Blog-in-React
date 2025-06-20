@@ -27,13 +27,13 @@
     display: flex;
     position: relative;
     justify-content: right;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 1250px;
   align-items: right;
   position: space-between;
   border-radius: 8px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 15px;
+  margin-top: 0px;
 }
  img{
     display:flex;
