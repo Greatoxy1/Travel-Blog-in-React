@@ -21,6 +21,9 @@
 }
  img{
     display:flex;
+    align-items: left;
+    justify-content: left;
+    border-radius: 8px;
     width: 350px;
     height: 300px;
     margin-bottom: 20px;

@@ -19,6 +19,8 @@ export function Layout(){
                     <div>
                         <Link to="new-post">New Post</Link>
                     </div>
+                   
+                   
                     
             </nav>
 

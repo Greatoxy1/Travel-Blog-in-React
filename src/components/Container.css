@@ -11,22 +11,29 @@
 }
 
 .image {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
 }
 
 .mapContainer {
   flex: 1;
+  display: flex;
   margin-left: 10px;
 }
 
 .map {
-  width: 50px;
-  height: 50px;
+    flex: 1;
+    display: flex;
+    position: relative;
+    justify-content: right;
+  width: 350px;
+  height: 350px;
   align-items: right;
-  border: none;
+  position: space-between;
   border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
  img{
     display:flex;
@@ -34,4 +41,3 @@
     height: 300px;
     margin-bottom: 20px;
  }
- 

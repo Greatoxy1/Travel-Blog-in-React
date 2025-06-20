@@ -1,0 +1,19 @@
+.DashBoard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.DashBoard .imgContainer {
+    flex: 1;
+    margin-right: 10px;
+}
+.Map {
+    flex: 1;
+    margin-left: 50px;
+    width: 100%;
+    height: 100%;
+    position: right;
+
+    margin-bottom: 10px;
+}

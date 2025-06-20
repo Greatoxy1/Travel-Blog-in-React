@@ -1,11 +1,5 @@
-import  { useState } from "react";
-import "./MenuBar.css";
-import { Route, Routes } from "react-router-dom";
-import Layout from "../pages/Layout";
-import Contact from "../pages/Contact";
-import NewPost from "../pages/NewPost";
-import PostDetail from "../components/PostDetail";
-
+import { useState } from "react";
+import { Router } from "./Router";
 export function MenuBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
 
@@ -15,23 +9,12 @@ export function MenuBar() {
 
   return (
     <>
+    <Router/>
       <div className="MenuBar">
         <nav>
-        
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="contact" element={<Contact />} />
-              <Route path="new post" element= {<NewPost/>}/>
-              <Route path="/posts/:id" element={<PostDetail />} />
-            </Route>
-          </Routes>
-
           <button onClick={handleToggle}>
             {isLoggedIn ? "Logout" : "Login"}
-
-
           </button>
-
         </nav>
       </div>
     </>
