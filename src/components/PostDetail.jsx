@@ -56,7 +56,7 @@ const Posts = [
 
 import { useState } from "react";
 import UserCard from '../components/UserCard'
-import Map from './Map';
+
 
 export function PostDetail() {
   const [activeId, setActiveId] = useState(null);
@@ -78,9 +78,10 @@ export function PostDetail() {
               <div>
                 <h3 className="Post-content">Image {post.id}</h3>
                     <UserCard/>
-                    <Map/>
-                <p>{post.name}{post.image} </p>
+                   
                 <p>{post.name}</p>
+                <p>{post.image} </p>
+                <p>{post.city}</p>                  
                 <p>{post.title}</p>
                 <p>{post.date}</p>
                 <p>{post.DetailView}</p>

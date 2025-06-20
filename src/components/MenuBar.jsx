@@ -5,7 +5,6 @@ import Layout from "../pages/Layout";
 import Contact from "../pages/Contact";
 import NewPost from "../pages/NewPost";
 import PostDetail from "../components/PostDetail";
-import Map from "./Map";
 
 export function MenuBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);

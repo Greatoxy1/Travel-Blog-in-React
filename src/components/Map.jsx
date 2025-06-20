@@ -7,25 +7,32 @@ const cities = [
   {
     id: 1,
     title: "Journey to Russia",
+     name: "John Terry", 
+     image: "John.jpg",
     city: "Moscow",
-    name: "Jane Mensah",
     coordinates: [37.6173, 55.7558],
   },
   {
     id: 2,
     title: "Exploring the Wonders of Japan",
+     name: "Jane Mensah",
+      image: "Jane.jpg",
     city: "Tokyo",
     coordinates: [139.6917, 35.6895],
   },
   {
     id: 3,
     title: "A Culinary Adventure in Italy",
+    name: "Alice Addai", 
+    image: "Alice.jpg",
     city: "Rome",
     coordinates: [12.4964, 41.9028],
   },
   {
     id: 4,
     title: "Safari in Kenya",
+    name: "Kudjo Asare", 
+    image: "kudjo.jpg",
     city: "Nairobi",
     coordinates: [36.8219, -1.2921],
   },
@@ -59,14 +66,20 @@ useEffect(() => {
         .setLngLat(city.coordinates)
         .setPopup(
           new maptilersdk.Popup().setHTML(`
-            <div style="max-width:200px;>
+          <div style="max-width:200px;">
             <h3>${city.title}</h3>
-            <p>${city.city}${
-              city.name ? `<br><strong>By:</strong> ${city.name}` : ""
-            }</p>
-            <a href="/posts/${city.id}" style="color: #0077cc; text-decoration: underline;">Read more</a>
-        </div>
-          `)
+            <div class="popup-author">
+              <strong>Author:</strong>
+              <img src="Alice.jpg" alt="image" />
+              <p>${city.city}${
+                city.name ? `<br><strong>By:</strong> ${city.name}` : ""
+              }</p>
+              <a href="/posts/${city.id}">Read more</a>
+            </div>
+            <img src="${city.image}" alt="${city.title}" class="popup-image" />
+            <p>${city.city}</p>
+          </div>
+        `)
         )
         .addTo(map.current);
     });
