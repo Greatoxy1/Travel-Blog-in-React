@@ -10,6 +10,7 @@ const cities = [
      name: "John Terry", 
      image: "John.jpg",
     city: "Moscow",
+     date: "2023-10-01",
     coordinates: [37.6173, 55.7558],
   },
   {
@@ -18,6 +19,7 @@ const cities = [
      name: "Jane Mensah",
       image: "Jane.jpg",
     city: "Tokyo",
+     date: "2023-09-15",
     coordinates: [139.6917, 35.6895],
   },
   {
@@ -26,6 +28,7 @@ const cities = [
     name: "Alice Addai", 
     image: "Alice.jpg",
     city: "Rome",
+       date: "2023-08-20",
     coordinates: [12.4964, 41.9028],
   },
   {
@@ -34,6 +37,7 @@ const cities = [
     name: "Kudjo Asare", 
     image: "kudjo.jpg",
     city: "Nairobi",
+     date: "2023-07-10",
     coordinates: [36.8219, -1.2921],
   },
 ];
@@ -78,6 +82,7 @@ useEffect(() => {
             </div>
             <img src="${city.image}" alt="${city.title}" class="popup-image" />
             <p>${city.city}</p>
+            <p>${city.date}</p>
           </div>
         `)
         )

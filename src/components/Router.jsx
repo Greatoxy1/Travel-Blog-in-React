@@ -12,9 +12,9 @@ export function Router(){
          <Routes>
             <Route path="/" element={<Layout />}>
               <Route path="contact" element={<Contact />} />
-              <Route path="new post" element= {<NewPost/>}/>
-              <Route path="/Home" element={<Map/>} />
-            
+              <Route path="new-post" element= {<NewPost/>}/>
+              <Route path="home" element={<Map/>} />
+
             </Route>
           </Routes>
           </>

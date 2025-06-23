@@ -5,3 +5,12 @@
 .App-headline {
   color: var(--color-primary);
 }
+.MenuBar {
+  flex: 1;
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  text-align: right;
+  align-items: right;
+ 
+}

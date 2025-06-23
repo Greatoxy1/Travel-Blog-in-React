@@ -4,18 +4,14 @@
   align-items: center;
   padding: 16px;
   background-color: rgb(154, 225, 11);
-  box-shadow: 0 2px 4px rgba(39, 6, 225, 0.1);
+  box-shadow: 0 2px 4px rgba(35, 225, 6, 0.1);
 }
 
-.header-left {
-  display: flex;
-  align-items: left;
-  margin-inline-start: auto;
-}
 
 .DiCoda {
-  height: 30px;
-  width: 30px;
+  display: flex;
+  height: 40px;
+  width: 40px;
   margin-right: 10px;
 }
 
@@ -27,9 +23,10 @@
 }
 
 .header-right {
+  flex: 1;
   display: flex;
   align-items: right;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   gap: 16px;
 }
 .Contact{
@@ -37,12 +34,12 @@
     align-items: flex-start;
     gap: 1rem;
     background-color: hsl(120, 19%, 87%);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #555;
+  color: #15e96d;
   font-size: 1rem;
 }
 
@@ -52,6 +49,7 @@
 
 .nav-button {
   background: none;
+  margin-top: 20px;
   border: none;
   color: #d00;
   font-size: 1rem;
@@ -59,16 +57,18 @@
 }
 
 .nav-button:hover {
-  text-decoration:rgb(240, 1, 1) ;
+  text-decoration:rgb(13, 215, 158) ;
 }
 nav {
+  flex:1;
      display: flex;
-     align-items: right;
+       margin-top: -20px;
+      flex-direction: row;
+     height: 30px;
+     align-items: left;
      gap: 1rem;
-     text-align: right;
-     color: hsl(279, 89%, 39%);
+     text-align: left;
+     color: hsl(191, 89%, 39%);
 }
-span {
-  margin-left: 15px;
-  font-weight: bold;
-}
+
+
