@@ -1,6 +1,5 @@
 import Container from './components/Container';
 import { Router } from './components/Router';
-import MenuBar from './components/MenuBar';
 import Map from './components/Map';
 import './App.css';
 export function App(){
@@ -8,7 +7,7 @@ export function App(){
     <>
    <div className="App">
     <Router/>
-     <MenuBar/>
+    
      </div>
     <div className="container">
      

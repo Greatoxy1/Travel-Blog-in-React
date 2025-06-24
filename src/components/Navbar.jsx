@@ -18,6 +18,9 @@ export  function Navbar() {
           <div>
             <Link to="new-post">New Post</Link>
           </div>
+          <div>
+            <Link to="login/logout">Login/Logout </Link>
+          </div>
         </nav>
   );
 }

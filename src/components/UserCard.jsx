@@ -17,8 +17,13 @@ export function UserCard({name,image}) {
             <img id={user.id} src={user.image} alt={user.name} />
             <span>{user.name}</span>
           </div>
+          
         ))}
+
         <PostMeta>{name}{image}</PostMeta>
+      </div>
+      <div>
+        <a href="/">Go Home</a>
       </div>
     </>
   );
