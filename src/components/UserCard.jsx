@@ -1,5 +1,6 @@
 import "./UserCard.css";
 import PostMeta from '../components/PostMeta'
+import { FaHouseUser } from "react-icons/fa";
 
 const users = [
   { id: 1, name: "John Terry", image: "John.jpg" },
@@ -23,7 +24,7 @@ export function UserCard({name,image}) {
         <PostMeta>{name}{image}</PostMeta>
       </div>
       <div>
-        <a href="/">Go Home</a>
+        <a href="/">Go Home</a><FaHouseUser />
       </div>
     </>
   );

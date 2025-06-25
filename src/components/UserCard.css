@@ -14,10 +14,11 @@
 
 }
  .user-card.image{
+  flex:1;
     display:flex;
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    height: 350px;
+   
 }
  img{
     display:flex;

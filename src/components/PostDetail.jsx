@@ -18,6 +18,7 @@ const Posts = [
   
     title: "Exploring the Wonders of Japan",
     city: "Tokyo",
+    
     date: "2023-09-15",
     img: "bimg.jpeg",
     DetailView: `Between bright neon lights and traditional temples, 

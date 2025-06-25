@@ -4,7 +4,7 @@ import { useState } from 'react';
              { 
                id: 1,
                
-               
+               name: "John Terry",
                title: "Journey to Rusia",
                city: "Moscow",
                date: "2023-10-01",
@@ -16,7 +16,7 @@ import { useState } from 'react';
              },
              {
                id: 2,
-             
+             name: "Jane Mensah",
                title: "Exploring the Wonders of Japan",
                city: "Tokyo",
                date: "2023-09-15",
@@ -30,7 +30,7 @@ import { useState } from 'react';
              },
              {
                id: 3,
-           
+                name: "Alice Addai",
                title: "A Culinary Adventure in Italy",
                city: "Rome",
                date: "2023-08-20",
@@ -41,7 +41,7 @@ import { useState } from 'react';
              },
              {
                id: 4,
-               
+               name : "Kudjo Asare",
                title: "Safari in Kenya",
                city: "Nairobi",
                date: "2023-07-10",
@@ -69,7 +69,8 @@ export default function NewPost(){
                     <div key={post.id} onClick={() => handleToggle(post.id)}>
                         {activeId === post.id ? (
                             <div>
-                                <h3 className="Post-content">Image {post.id}</h3>
+                                <h3 className="Post-content"></h3>
+                                <p>{post.name}</p>
                                 <p>{post.city}</p>                  
                                 <p>{post.title}</p>
                                 <p>{post.date}</p>
